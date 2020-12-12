@@ -34,5 +34,14 @@ aNum switch
 ```
 
 ### Type Patterns
-
+```
+object value = DateTime.Now;
+value switch
+{
+    string s => "it's a string!",
+    int i    => "it's an int!",
+    _        => "it's something else!"
+}
+>> it's something else!
+```
 
