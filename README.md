@@ -3,6 +3,20 @@ A guide to all C# pattern matching forms. Each example illustrates a code snippe
 
 The result of an expression or a `Console.WriteLine` call will follow the code with `>>`.
 
+### Where can pattern matching be used?
+`if` blocks:
+- `is` expressions
+
+`switch` statements:
+- `when` conditions
+- `type` patterns
+
+`switch` expressions:
+- `is` expressions
+- `when` conditions
+- `type` patterns
+
+
 ## Introduced in C# 7
 ___
 ### `is` Expressions
