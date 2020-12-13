@@ -4,18 +4,9 @@ A guide to all C# pattern matching forms. Each example illustrates a code snippe
 The result of an expression or a `Console.WriteLine` call will follow the code with `>>`.
 
 ### Where can pattern matching be used?
-`if` blocks:
-- `is` expressions
-
-`switch` statements:
-- `when` conditions
-- `type` patterns
-
-`switch` expressions:
-- `is` expressions
-- `when` conditions
-- `type` patterns
-
+- `switch` statements
+- `is` operator
+- `switch` expressions
 
 ## Introduced in C# 7
 ___
@@ -59,3 +50,18 @@ value switch
 >> it's something else!
 ```
 
+## Introduced in C# 8
+___
+### `is` Patterns Extended to Test Expressions Against Patterns
+```
+var d = DateTime.UtcNow;
+if (d is { Kind: DateTimeKind.Utc })
+{
+    Console.WriteLine("UTC DateTime");
+}
+else
+{
+    Console.WriteLine("Not UTC DateTime");
+}
+>> UTC DateTime
+```
