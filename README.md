@@ -65,3 +65,15 @@ else
 }
 >> UTC DateTime
 ```
+
+### Property Patterns
+```
+var d = DateTime.UtcNow;
+d switch
+{
+    { Year: 2020 } => "current year",
+    { Year: 2019 } => "previous year",
+    _              => "too far past or future"
+}
+>> current year
+```
