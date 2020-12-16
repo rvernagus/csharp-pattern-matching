@@ -77,3 +77,29 @@ d switch
 }
 >> current year
 ```
+
+### Declaration Patterns
+```
+object o = 1;
+if (o is int i)
+{
+    Console.WriteLine($"int of {i}");
+}
+else
+{
+    Console.WriteLine("o is either null or non-int");
+}
+>> int of 1
+```
+```
+int? o = null;
+if (o is int i)
+{
+    Console.WriteLine($"int of {i}");
+}
+else
+{
+    Console.WriteLine("o is either null or non-int");
+}
+>> o is either null or non-int
+```
