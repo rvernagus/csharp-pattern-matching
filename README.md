@@ -103,3 +103,18 @@ else
 }
 >> o is either null or non-int
 ```
+
+### Constant Patterns
+```
+var bits = (0, 1);
+var result = bits switch
+{
+    (0, 0)           => false,
+    (0, 1) or (1, 0) => true,
+    (1, 1)           => true,
+    _                => false
+};
+
+Console.WriteLine(result);
+>> True
+```
