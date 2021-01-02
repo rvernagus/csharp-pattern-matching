@@ -130,3 +130,17 @@ var newState = (GetState(), action, hasKey) switch
         (var state, _, _) => state
 };
 ```
+
+### Property Patterns
+```
+object o = "123";
+o switch
+{
+    string { Length: 1 } s => "length 1 string",
+    string { Length: 2 } s => "length 2 string",
+    string { Length: 3 } s => "length 3 string",
+    int i                  => "an int",
+    _                      => "null or not a string",
+}
+> length 3 string
+```
